@@ -202,6 +202,8 @@ svg * {
 }
 
 body {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
   font-size: clamp(13px, 1.5277777778vw, 22px);
   font-weight: 400;
   font-weight: 400;
@@ -579,7 +581,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40%;
+  margin-top: 50%;
   gap: 30px;
 }
 .mobile-overlay__close-button {
@@ -591,7 +593,7 @@ h2 {
   padding-inline: 14px;
 }
 .mobile-overlay__close-button :focus {
-  outline: none;
+  outline: transparent;
 }
 .mobile-overlay__close-button hr {
   position: absolute;
