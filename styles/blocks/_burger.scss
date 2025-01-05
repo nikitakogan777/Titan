@@ -1,5 +1,4 @@
 .burger {
-  z-index: 2000;
   cursor: pointer;
   position: relative;
   border: none;
@@ -10,8 +9,6 @@
 
   @include mobile {
     display: block;
-    z-index: 2000;
-
   }
 }
 
@@ -25,38 +22,15 @@
   height: 1.5px;
   border-radius: 10px;
   background: var(--color-oranje);
-  z-index: 2000;
-
 }
 
 .burger::before {
   top: 0;
-  box-shadow: 0 5.5px 0 var(--color-oranje  ); /* уменьшили отступ */
+  box-shadow: 0 5.5px 0 var(--color-oranje  );
   transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
-  z-index: 2000;
-
 }
 
 .burger::after {
   bottom: 0;
   transition: bottom .3s .15s, transform .3s;
-  z-index: 2000;
-
-}
-
-.burger.active::before {
-  top: 5.5px; /* уменьшили смещение */
-  transform: rotate(45deg);
-  box-shadow: 0 3px 0 rgba(0,0,0,0);
-  transition: box-shadow .15s, top .3s, transform .3s .15s;
-  z-index: 2000;
-
-}
-
-.burger.active::after {
-  bottom: 5.5px; /* уменьшили смещение */
-  transform: rotate(-45deg);
-  transition: bottom .3s, transform .3s .15s;
-  z-index: 2000;
-
 }

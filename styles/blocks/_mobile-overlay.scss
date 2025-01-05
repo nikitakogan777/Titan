@@ -16,8 +16,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30%;
-    gap: 35px;
+    margin-top: 40%;
+    gap: 30px;
   }
 
   &__close-button {
@@ -27,6 +27,10 @@
     display: block;
     margin-left: auto;
     padding-inline: 14px;
+    :focus {
+      outline: none;
+    }
+
     hr {
       position: absolute;
       top: 20.5px;
@@ -43,4 +47,8 @@
       rotate: 135deg;
     }
   }
+}
+
+.menu-overlay__link {
+  padding: 10px;
 }

@@ -22,7 +22,9 @@ a {
 
 h1 {
   @include fluid-text(30, 20);
+  font-weight: 400;
 }
 h2 {
   @include fluid-text(24, 16);
+  font-weight: 400;
 }

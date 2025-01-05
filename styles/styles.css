@@ -203,7 +203,7 @@ svg * {
 
 body {
   font-size: clamp(13px, 1.5277777778vw, 22px);
-  font-weight: 100;
+  font-weight: 400;
   font-weight: 400;
   font-family: var(--font-family-base);
   line-height: normal;
@@ -224,12 +224,14 @@ a {
 
 h1 {
   font-size: clamp(20px, 2.0833333333vw, 30px);
-  font-weight: 100;
+  font-weight: 400;
+  font-weight: 400;
 }
 
 h2 {
   font-size: clamp(16px, 1.6666666667vw, 24px);
-  font-weight: 100;
+  font-weight: 400;
+  font-weight: 400;
 }
 
 .images__background {
@@ -577,8 +579,8 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 30%;
-  gap: 35px;
+  margin-top: 40%;
+  gap: 30px;
 }
 .mobile-overlay__close-button {
   border: none;
@@ -587,6 +589,9 @@ h2 {
   display: block;
   margin-left: auto;
   padding-inline: 14px;
+}
+.mobile-overlay__close-button :focus {
+  outline: none;
 }
 .mobile-overlay__close-button hr {
   position: absolute;
@@ -604,18 +609,22 @@ h2 {
   rotate: 135deg;
 }
 
+.menu-overlay__link {
+  padding: 10px;
+}
+
 .footer {
   max-width: 100vw;
   padding-top: 300px;
 }
 @media (max-width: 1023px) {
   .footer {
-    padding-top: 200px;
+    padding-top: 180px;
   }
 }
 @media (max-width: 767px) {
   .footer {
-    padding-top: 150px;
+    padding-top: 130px;
   }
 }
 .footer__block {
@@ -662,9 +671,17 @@ h2 {
     text-align: center;
   }
 }
+@media (max-width: 767px) {
+  .block__info {
+    gap: 17px;
+    padding-inline: 1px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+}
 
 .burger {
-  z-index: 2000;
   cursor: pointer;
   position: relative;
   border: none;
@@ -676,7 +693,6 @@ h2 {
 @media (max-width: 767px) {
   .burger {
     display: block;
-    z-index: 2000;
   }
 }
 
@@ -690,35 +706,17 @@ h2 {
   height: 1.5px;
   border-radius: 10px;
   background: var(--color-oranje);
-  z-index: 2000;
 }
 
 .burger::before {
   top: 0;
-  box-shadow: 0 5.5px 0 var(--color-oranje); /* уменьшили отступ */
+  box-shadow: 0 5.5px 0 var(--color-oranje);
   transition: box-shadow 0.3s 0.15s, top 0.3s 0.15s, transform 0.3s;
-  z-index: 2000;
 }
 
 .burger::after {
   bottom: 0;
   transition: bottom 0.3s 0.15s, transform 0.3s;
-  z-index: 2000;
-}
-
-.burger.active::before {
-  top: 5.5px; /* уменьшили смещение */
-  transform: rotate(45deg);
-  box-shadow: 0 3px 0 rgba(0, 0, 0, 0);
-  transition: box-shadow 0.15s, top 0.3s, transform 0.3s 0.15s;
-  z-index: 2000;
-}
-
-.burger.active::after {
-  bottom: 5.5px; /* уменьшили смещение */
-  transform: rotate(-45deg);
-  transition: bottom 0.3s, transform 0.3s 0.15s;
-  z-index: 2000;
 }
 
 /*# sourceMappingURL=styles.css.map */
