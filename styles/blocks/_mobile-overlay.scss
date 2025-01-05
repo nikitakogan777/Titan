@@ -24,13 +24,17 @@
     border: none;
     background: transparent;
     position: relative;
+    display: block;
+    margin-left: auto;
+    padding-inline: 14px;
     hr {
       position: absolute;
-      top: 50%;
-      width: 20px;
-      height: 2px;
-      background: #000;
+      top: 20.5px;
+      width: 17px;
+      height: 1.5px;
+      background: var(--color-oranje);
       border: none;
+      border-radius: 15px;
     }
     hr:first-child {
       rotate: 45deg;
@@ -39,16 +43,4 @@
       rotate: 135deg;
     }
   }
-}
-
-dialog {
-  position: fixed;
-  display: none;
-  z-index: 100;
-}
-
-dialog[open] {
-  position: fixed;
-  display: block;
-  z-index: 100;
 }
