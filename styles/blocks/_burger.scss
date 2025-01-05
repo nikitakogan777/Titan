@@ -7,6 +7,11 @@
   height: 13px;
   display: none;
 
+  :focus {
+    outline: transparent;
+  }
+
+
   @include mobile {
     display: block;
   }

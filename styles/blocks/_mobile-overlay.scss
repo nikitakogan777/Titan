@@ -39,6 +39,11 @@
       background: var(--color-oranje);
       border: none;
       border-radius: 15px;
+
+      :focus {
+        outline: transparent;
+      }
+
     }
     hr:first-child {
       rotate: 45deg;
@@ -51,4 +56,9 @@
 
 .menu-overlay__link {
   padding: 10px;
+
+  :focus {
+    outline: transparent;
+  }
+
 }

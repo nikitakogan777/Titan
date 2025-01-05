@@ -604,6 +604,9 @@ h2 {
   border: none;
   border-radius: 15px;
 }
+.mobile-overlay__close-button hr :focus {
+  outline: transparent;
+}
 .mobile-overlay__close-button hr:first-child {
   rotate: 45deg;
 }
@@ -613,6 +616,9 @@ h2 {
 
 .menu-overlay__link {
   padding: 10px;
+}
+.menu-overlay__link :focus {
+  outline: transparent;
 }
 
 .footer {
@@ -691,6 +697,9 @@ h2 {
   width: 17px;
   height: 13px;
   display: none;
+}
+.burger :focus {
+  outline: transparent;
 }
 @media (max-width: 767px) {
   .burger {
