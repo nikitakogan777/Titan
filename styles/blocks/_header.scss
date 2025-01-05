@@ -1,0 +1,71 @@
+.header {
+  padding-top: 50px;
+
+  &__title {
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+
+  @include desktop {
+    padding-top: 25px;
+  }
+
+  @include mobile {
+    padding-top: 15px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 55px;
+
+    @include mobile {
+      column-gap: 0;
+    }
+  }
+
+  &__menu {
+    margin-left: auto;
+
+    &-list {
+      display: flex;
+      align-items: center;
+      column-gap: 45px;
+
+      @include desktop {
+        column-gap: 25px;
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &__link {
+      position: relative;
+      height: 40px;
+      display: inline-flex;
+      align-items: center;
+
+      @include hover {
+        &::after {
+          width: 100%;
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        translate: -50%;
+        width: 0;
+        height: 2px;
+        background-color: var(--color-oranje);
+        transition-duration: inherit;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.description {
+  padding-top: 100px;
+  padding-inline: 40px;
+
+  @include tablet {
+    padding-top: 70px;
+  }
+
+  @include mobile {
+    padding-inline: 10px;
+    padding-top: 40px;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+  }
+
+  &__title {
+    text-align: center;
+    max-width: 865px;
+
+  @include tablet {
+    max-width: 500px;
+  }
+
+  @include mobile {
+    max-width: 600px;
+    }
+  }
+}
+
+.hero_title.description__container {
+  opacity: 1;
+  transition: 1.5s;
+}
