@@ -27,8 +27,13 @@
     display: block;
     margin-left: auto;
     padding-inline: 14px;
+
     :focus {
-      outline: transparent;
+      outline: none;
+    }
+
+    :focus-visible {
+      outline: none;
     }
 
     hr {
@@ -40,9 +45,6 @@
       border: none;
       border-radius: 15px;
 
-      :focus {
-        outline: transparent;
-      }
 
     }
     hr:first-child {
@@ -56,9 +58,4 @@
 
 .menu-overlay__link {
   padding: 10px;
-
-  :focus {
-    outline: transparent;
-  }
-
 }
