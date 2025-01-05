@@ -12,7 +12,7 @@
   }
 
   &__block {
-    max-width: 100vw;
+    width: 100%;
     height: 255px;
     background-color: var(--color-oranje);
     display: flex;
@@ -25,10 +25,8 @@
       align-items: center;
       justify-content: center;
     }
-    }
-
+  }
 }
-
 
 .block__info {
   display: flex;
@@ -37,10 +35,22 @@
   padding-inline: 80px;
   width: 100%;
 
+  div:first-child {
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    @include tablet {
+      display: contents;
+    }
+  }
+
   @include tablet {
     gap: 20px;
     padding-inline: 40px;
     display: flex;
     align-items: center;
-  text-align: center}
+    text-align: center;
+  }
 }
