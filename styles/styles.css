@@ -184,7 +184,8 @@ svg * {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -235,7 +236,8 @@ h2 {
 .images__background {
   width: 100vw;
   height: auto;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 @media (max-width: 767px) {
@@ -507,11 +509,13 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: 55px;
+  -moz-column-gap: 55px;
+       column-gap: 55px;
 }
 @media (max-width: 767px) {
   .header__inner {
-    column-gap: 0;
+    -moz-column-gap: 0;
+         column-gap: 0;
   }
 }
 .header__menu {
@@ -520,11 +524,13 @@ h2 {
 .header__menu-list {
   display: flex;
   align-items: center;
-  column-gap: 45px;
+  -moz-column-gap: 45px;
+       column-gap: 45px;
 }
 @media (max-width: 1280px) {
   .header__menu-list {
-    column-gap: 25px;
+    -moz-column-gap: 25px;
+         column-gap: 25px;
   }
 }
 @media (max-width: 767px) {
@@ -579,6 +585,25 @@ h2 {
   align-items: center;
   margin-top: 30%;
   gap: 35px;
+}
+.mobile-overlay__close-button {
+  border: none;
+  background: transparent;
+  position: relative;
+}
+.mobile-overlay__close-button hr {
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 2px;
+  background: #000;
+  border: none;
+}
+.mobile-overlay__close-button hr:first-child {
+  rotate: 45deg;
+}
+.mobile-overlay__close-button hr:last-child {
+  rotate: 135deg;
 }
 
 dialog {
@@ -697,6 +722,4 @@ dialog[open] {
   transform: rotate(-45deg);
   transition: bottom 0.3s, transform 0.3s 0.15s;
   z-index: 2000;
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

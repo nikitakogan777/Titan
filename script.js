@@ -1,18 +1,18 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const phoneLink = document.querySelector('.phone-link');
+document.addEventListener("DOMContentLoaded", () => {
+  const phoneLink = document.querySelector(".phone-link");
 
   if (phoneLink) {
     const isMobile = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
 
     if (!isMobile) {
-      phoneLink.removeAttribute('href');
-      phoneLink.style.cursor = 'default';
+      phoneLink.removeAttribute("href");
+      phoneLink.style.cursor = "default";
     }
   }
 
   function addClassOnIntersect(className, targetClass, threshold = 0.5) {
     function onEntry(entry) {
-      entry.forEach(change => {
+      entry.forEach((change) => {
         if (change.isIntersecting) {
           change.target.classList.add(className);
         }
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const options = {
-      threshold: [threshold]
+      threshold: [threshold],
     };
 
     const observer = new IntersectionObserver(onEntry, options);
@@ -31,25 +31,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  addClassOnIntersect('images__background', '.hero__body');
-  addClassOnIntersect('hero_title', '.description__container');
-  addClassOnIntersect('description__header', '.achievements__items');
-  addClassOnIntersect('items', '.social__body');
+  addClassOnIntersect("images__background", ".hero__body");
+  addClassOnIntersect("hero_title", ".description__container");
+  addClassOnIntersect("description__header", ".achievements__items");
+  addClassOnIntersect("items", ".social__body");
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const openButton = document.getElementById('openMenuButton');
-  const dialog = document.getElementById('mobileOverlay');
+document.addEventListener("DOMContentLoaded", () => {
+  const openButton = document.getElementById("openMenuButton");
+  const closeButton = document.getElementById("closeMenuButton");
+  const dialog = document.getElementById("mobileOverlay");
 
-  openButton.addEventListener('click', () => {
-    dialog.showModal();
-    openButton.classList.add('active');
-  });
+  const openMenu = () => dialog.showModal();
+  const closeMenu = () => dialog.close();
 
-  dialog.addEventListener('click', (event) => {
-    if (event.target === dialog) {
-      dialog.close();
-      openButton.classList.remove('active');
-    }
-  });
+  openButton.addEventListener("click", openMenu);
+  dialog.addEventListener("click", closeMenu);
+  closeButton.addEventListener("click", closeButton);
 });

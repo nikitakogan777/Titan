@@ -19,6 +19,26 @@
     margin-top: 30%;
     gap: 35px;
   }
+
+  &__close-button {
+    border: none;
+    background: transparent;
+    position: relative;
+    hr {
+      position: absolute;
+      top: 50%;
+      width: 20px;
+      height: 2px;
+      background: #000;
+      border: none;
+    }
+    hr:first-child {
+      rotate: 45deg;
+    }
+    hr:last-child {
+      rotate: 135deg;
+    }
+  }
 }
 
 dialog {
@@ -32,6 +52,3 @@ dialog[open] {
   display: block;
   z-index: 100;
 }
-
-
-
