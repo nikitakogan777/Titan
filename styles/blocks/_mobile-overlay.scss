@@ -17,7 +17,8 @@
     flex-direction: column;
     align-items: center;
     margin-top: 50%;
-    gap: 30px;
+    gap: 35px;
+    font-size: 15px;
   }
 
   &__close-button {
@@ -27,14 +28,6 @@
     display: block;
     margin-left: auto;
     padding-inline: 14px;
-
-    :focus {
-      outline: none;
-    }
-
-    :focus-visible {
-      outline: none;
-    }
 
     hr {
       position: absolute;
@@ -67,7 +60,7 @@ button.mobile-overlay__close-button:focus-visible {
 
 button:focus {
   outline: none;
-  -webkit-tap-highlight-color: transparent; /* Убирает нажатие */
+  -webkit-tap-highlight-color: transparent;
 }
 button:focus,
 button:active {

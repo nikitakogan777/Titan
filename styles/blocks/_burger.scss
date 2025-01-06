@@ -7,11 +7,6 @@
   height: 13px;
   display: none;
 
-  :focus {
-    outline: none;
-  }
-
-
   @include mobile {
     display: block;
   }
@@ -32,10 +27,8 @@
 .burger::before {
   top: 0;
   box-shadow: 0 5.5px 0 var(--color-oranje  );
-  transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
 }
 
 .burger::after {
   bottom: 0;
-  transition: bottom .3s .15s, transform .3s;
 }

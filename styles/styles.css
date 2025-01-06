@@ -583,7 +583,8 @@ h2 {
   flex-direction: column;
   align-items: center;
   margin-top: 50%;
-  gap: 30px;
+  gap: 35px;
+  font-size: 15px;
 }
 .mobile-overlay__close-button {
   border: none;
@@ -592,12 +593,6 @@ h2 {
   display: block;
   margin-left: auto;
   padding-inline: 14px;
-}
-.mobile-overlay__close-button :focus {
-  outline: none;
-}
-.mobile-overlay__close-button :focus-visible {
-  outline: none;
 }
 .mobile-overlay__close-button hr {
   position: absolute;
@@ -626,7 +621,7 @@ button.mobile-overlay__close-button:focus-visible {
 
 button:focus {
   outline: none;
-  -webkit-tap-highlight-color: transparent; /* Убирает нажатие */
+  -webkit-tap-highlight-color: transparent;
 }
 
 button:focus,
@@ -716,9 +711,6 @@ dialog:focus-within {
   height: 13px;
   display: none;
 }
-.burger :focus {
-  outline: none;
-}
 @media (max-width: 767px) {
   .burger {
     display: block;
@@ -740,12 +732,10 @@ dialog:focus-within {
 .burger::before {
   top: 0;
   box-shadow: 0 5.5px 0 var(--color-oranje);
-  transition: box-shadow 0.3s 0.15s, top 0.3s 0.15s, transform 0.3s;
 }
 
 .burger::after {
   bottom: 0;
-  transition: bottom 0.3s 0.15s, transform 0.3s;
 }
 
 /*# sourceMappingURL=styles.css.map */
