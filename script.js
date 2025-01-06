@@ -49,3 +49,26 @@ document.addEventListener("DOMContentLoaded", () => {
   dialog.addEventListener("click", closeMenu);
   closeButton.addEventListener("click", closeButton);
 });
+const links = document.querySelectorAll('.menu-overlay__link'); // Ссылки меню
+const pages = document.querySelectorAll('.page'); // Вкладки
+
+links.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault(); // Отменяем стандартное действие по ссылке
+
+    const target = link.getAttribute('data-target'); // Получаем data-target
+    const targetElement = document.getElementById(target); // Ищем нужный элемент
+
+    if (!targetElement) { // Если элемент не найден
+      console.error(`Элемент с id="${target}" не найден!`);
+      return; // Выходим из функции
+    }
+
+    // Скрываем все вкладки
+    pages.forEach(page => page.classList.remove('active'));
+
+    // Показываем нужную вкладку
+    targetElement.classList.add('active');
+  });
+});
+

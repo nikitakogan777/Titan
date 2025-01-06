@@ -619,6 +619,26 @@ h2 {
   padding: 10px;
 }
 
+button.mobile-overlay__close-button:focus,
+button.mobile-overlay__close-button:focus-visible {
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+  -webkit-tap-highlight-color: transparent; /* Убирает нажатие */
+}
+
+button:focus,
+button:active {
+  outline: none;
+  user-select: none;
+}
+
+dialog:focus-within {
+  outline: none;
+}
+
 .footer {
   max-width: 100vw;
   padding-top: 300px;
